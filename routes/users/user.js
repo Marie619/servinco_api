@@ -23,7 +23,7 @@ router.post('/signup', function (req, res, next) {
 
     let incomingUser = makeNewUser(userData);
 
-    mongoose.connect(url, {server: { poolSize: 10 }}, {useNewUrlParser: true}, function (err) {
+    mongoose.connect(url, {useNewUrlParser: true}, function (err) {
 
         if (err) throw err;
 
@@ -55,7 +55,7 @@ router.post('/signin', function (req, res, next) {
     let userData = req.body;
 
 
-    mongoose.connect(url, {server: { poolSize: 10 }}, {useNewUrlParser: true}, function (err) {
+    mongoose.connect(url, {useNewUrlParser: true}, function (err) {
 
         if (err) throw err;
 
